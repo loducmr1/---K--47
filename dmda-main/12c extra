@@ -1,0 +1,21 @@
+Approach 1: Using the var.test() Function
+# Sample data
+group1 <- c(15.2, 16.5, 14.8, 16.9, 15.5, 15.8)
+group2 <- c(14.0, 13.8, 15.2, 13.9, 14.1, 14.5)
+
+# Perform the F-Test
+f_test_result <- var.test(group1, group2)
+
+# Display the result
+print(f_test_result)
+Approach 2: Manual Calculation of F-Test in R
+# Calculate variances
+var_group1 <- var(group1)
+var_group2 <- var(group2)
+
+# Calculate F statistic
+f_value <- var_group1 / var_group2
+
+# Display F statistic
+cat("F Statistic:", f_value, "\n")
+
