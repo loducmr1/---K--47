@@ -1,0 +1,2 @@
+S->e,O->t,I->h,G->o,F->n,M->a,W->w,X->x,B->k,U->d,D->l,K->r,P->i,L->s,V->v,H->p,A->b,Y-y,
+E->m,N->c,C->f,R->g,Q->u,J->q

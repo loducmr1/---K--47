@@ -1,0 +1,29 @@
+from Crypto.PublicKey import RSA
+from Crypto.Util.number import inverse
+import base64
+
+# RSA parameters
+n = 1881898132012906209636836794064650616053848017163 \
+    5663379411730422067078343825298556262898791572 \
+    24645563455869380559696623962023428549353705937809
+
+e = 65537
+
+p = 39087350862440649373205258696496964933383937
+q = 4827250384635723622046028317320753636395307257
+
+# Calculate phi(n)
+phi_n = (p - 1) * (q - 1)
+
+# Calculate private key (d)
+d = inverse(e, phi_n)
+
+# Generate the RSA private key
+key = RSA.construct((n, e, d, p, q))
+
+# Save the private key to a file
+file_name = "private.pem"
+with open(file_name, "wb") as f:
+    f.write(key.exportKey())
+
+print(f"Private key saved to {file_name}")
